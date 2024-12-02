@@ -1,0 +1,18 @@
+{
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint", //将prettier-eslint作为默认全格式文件的格式化程序
+  "editor.formatOnPaste": false, // 粘贴的时候不自动格式化
+  "editor.formatOnType": false, // 输入的时候不自动格式化
+  "editor.formatOnSave": true, // 保存的时候自动格式化
+  "editor.formatOnSaveMode": "file", // 保存的时候格式化整个文件，而不是修改的部分（只格式化修改的部分需要配合git使用）
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" //这里是为了覆盖用户setting.json中对于js文件的单独设置
+  },
+  "[env]": {
+    "editor.defaultFormatter": "IronGeek.vscode-env"
+  },
+  "vue.codeActions.enabled": false,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.port": 5501
+}
