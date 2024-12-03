@@ -1,62 +1,67 @@
 <template>
-  <div class="home">fasdfasda{{ isCollapse }}</div>
+  <div class="home">
+    <div id="mychart" class="chart"></div>
+    <el-row>
+      <el-button @click="showNotification">显示通知</el-button>
+      <el-button>默认按钮</el-button>
+      <el-button type="primary">主要按钮</el-button>
+      <el-button type="success">成功按钮</el-button>
+      <el-button type="info">信息按钮</el-button>
+      <el-button type="warning">警告按钮</el-button>
+      <el-button type="danger">危险按钮</el-button>
+    </el-row>
+  </div>
 </template>
 
 <script>
 import * as echarts from 'echarts';
+import { mapState } from 'vuex';
 
 export default {
   name: 'HomePage',
   computed: {
-    isCollapse() {
-      // 存储位置： store.state.{模块名,在store/index.js中module下的}.{state中定义的属性}
-      return this.$store.state.tab.isCollapse;
-    },
+    ...mapState(['count']),
   },
   mounted() {
-    console.log('Store getters:', this.$store);
-    // this.initChart();
+    this.initChart();
   },
   methods: {
     initChart() {
-      if (!this.visitStats.days || !this.visitStats.data) {
-        console.error('Visit stats data is not available');
-        return;
-      }
-
-      this.chart = echarts.init(document.getElementById('chartContainer'));
-
-      const option = {
+      var myChart = echarts.init(document.getElementById('mychart'));
+      // 绘制图表
+      myChart.setOption({
         title: {
-          text: 'Blog Visit Statistics',
+          text: 'ECharts 入门示例',
         },
-        tooltip: {
-          trigger: 'axis',
-        },
+        tooltip: {},
         xAxis: {
-          type: 'category',
-          data: this.visitStats.days,
+          data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
         },
-        yAxis: {
-          type: 'value',
-        },
+        yAxis: {},
         series: [
           {
-            name: 'Visits',
+            name: '销量',
             type: 'bar',
-            data: this.visitStats.data,
-            itemStyle: {
-              color: '#42b983',
-            },
+            data: [5, 20, 36, 10, 10, 20],
           },
         ],
-      };
-
-      this.chart.setOption(option);
-
-      window.addEventListener('resize', () => {
-        this.chart && this.chart.resize();
       });
+    },
+    showNotification() {
+      if ('Notification' in window) {
+        Notification.requestPermission().then((permission) => {
+          if (permission === 'granted') {
+            new Notification('通知标题', {
+              body: '这是通知的内容',
+              icon: 'path/to/icon.png', // 可选: 通知图标
+            });
+          } else {
+            console.log('用户拒绝了通知权限');
+          }
+        });
+      } else {
+        console.log('当前浏览器不支持通知');
+      }
     },
   },
   beforeDestroy() {
@@ -68,65 +73,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .home {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.blog-posts {
-  display: grid;
-  gap: 20px;
-}
-
-.post-card {
-  padding: 20px;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  transition: transform 0.2s;
-}
-
-.post-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.post-meta {
-  color: #666;
-  font-size: 0.9em;
-}
-
-.read-more {
-  background-color: #42b983;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.read-more:hover {
-  background-color: #3aa876;
-}
-
-#chartContainer {
-  margin: 20px auto;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-}
-
-.stats-summary {
-  text-align: center;
-  margin: 20px 0;
-  padding: 15px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
+  .chart {
+    width: 100%;
+    height: 400px;
+  }
 }
 </style>
