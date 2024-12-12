@@ -1,0 +1,174 @@
+html {
+    font: 14px/1.5 "Microsoft YaHei", "PingFang SC", Arial, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0px;
+    padding: 0px;
+    height:100%;
+}
+
+body {
+    color: #333;
+    min-width: auto;
+    position: relative;
+    background: #FFFFFF;
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+html,body {
+    /* padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom); */
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+a {
+    background: transparent;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+a:active {
+    outline: 0;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: normal;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    /* For some Androids */
+    outline: none;
+}
+
+input,
+textarea,
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+}
+
+textarea {
+    resize: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form,
+blockquote {
+    margin: 0;
+}
+
+ul,
+ol,
+li,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #ccc;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #ccc;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+a:hover {
+    color: #4b98ff;
+}

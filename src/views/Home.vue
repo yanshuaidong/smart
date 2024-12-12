@@ -1,15 +1,6 @@
 <template>
   <div class="home">
-    <div id="mychart" class="chart"></div>
-    <el-row>
-      <el-button @click="showNotification">显示通知</el-button>
-      <el-button>默认按钮</el-button>
-      <el-button type="primary">主要按钮</el-button>
-      <el-button type="success">成功按钮</el-button>
-      <el-button type="info">信息按钮</el-button>
-      <el-button type="warning">警告按钮</el-button>
-      <el-button type="danger">危险按钮</el-button>
-    </el-row>
+    <router-link to="/boards">数据看板</router-link>
   </div>
 </template>
 
@@ -23,7 +14,7 @@ export default {
     ...mapState(['count']),
   },
   mounted() {
-    this.initChart();
+    // this.initChart();
   },
   methods: {
     initChart() {
