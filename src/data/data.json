@@ -1,0 +1,71 @@
+[
+  {
+    "filePath": "src/data/有色金属/铜.js",
+    "name": "铜",
+    "code": "cu",
+    "date": "2024-12-17",
+    "price": {
+      "open": 123,
+      "high": 124,
+      "low": 125,
+      "close": 126,
+      "settlement": 127
+    },
+    "volume": 128,
+    "openInterest": 129,
+    "turnover": 130,
+    "dailyIncrease": 131,
+    "capitalFlow": 132,
+    "bollinger": {
+      "upper": 133,
+      "middle": 134,
+      "lower": 135
+    }
+  },
+  {
+    "filePath": "src/data/有色金属/铝.js",
+    "name": "铝",
+    "code": "ab",
+    "date": "2024-12-17",
+    "price": {
+      "open": 123,
+      "high": 124,
+      "low": 125,
+      "close": 126,
+      "settlement": 127
+    },
+    "volume": 128,
+    "openInterest": 129,
+    "turnover": 130,
+    "dailyIncrease": 131,
+    "capitalFlow": 132,
+    "bollinger": {
+      "upper": 133,
+      "middle": 134,
+      "lower": 135
+    }
+  },
+  {
+    "filePath": "src/data/有色金属/锌.js",
+    "name": "锌",
+    "code": "cd",
+    "date": "2024-12-17",
+    "price": {
+      "open": 123,
+      "high": 124,
+      "low": 125,
+      "close": 126,
+      "settlement": 127
+    },
+    "volume": 128,
+    "openInterest": 129,
+    "turnover": 130,
+    "dailyIncrease": 131,
+    "capitalFlow": 132,
+    "bollinger": {
+      "upper": 133,
+      "middle": 134,
+      "lower": 135
+    }
+  }
+]
